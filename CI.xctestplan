@@ -4,7 +4,7 @@
       "id" : "793ED250-5BDA-4CC7-8030-C5959402980E",
       "name" : "Test Scheme Action",
       "options" : {
-
+        "threadSanitizerEnabled" : true
       }
     }
   ],
