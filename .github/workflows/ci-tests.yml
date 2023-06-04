@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Build and test default scheme using xcodebuild command
+    name: Build and test CI scheme using xcodebuild command
     runs-on: macos-latest
 
     steps:
