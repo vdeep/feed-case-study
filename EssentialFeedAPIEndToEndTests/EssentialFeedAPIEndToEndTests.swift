@@ -28,12 +28,12 @@ final class EssentialFeedAPIEndToEndTests: XCTestCase {
     }
     
     // MARK: - helpers
-    private func getFeedResult() -> LoadFeedResult? {
+    private func getFeedResult(file: StaticString = #file, line: UInt = #line) -> LoadFeedResult? {
         let testServerURL = URL(string: "https://vdeep-feed-case-study.netlify.app/feed-case-study/test-api/feed.json")!
         let client = URLSessionHTTPClient()
         let loader = RemoteFeedLoader(url: testServerURL, client: client)
-        trackForMemoryLeaks(client)
-        trackForMemoryLeaks(loader)
+        trackForMemoryLeaks(client, file: file, line: line)
+        trackForMemoryLeaks(loader, file: file, line: line)
         
         let exp = expectation(description: "Wait for load completion")
         
