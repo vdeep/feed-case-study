@@ -29,7 +29,7 @@ final class EssentialFeedAPIEndToEndTests: XCTestCase {
     
     // MARK: - helpers
     private func getFeedResult() -> LoadFeedResult? {
-        let testServerURL = URL(string: "https://essentialdeveloper.com/feed-case-study/test-api/feed")!
+        let testServerURL = URL(string: "https://vdeep-feed-case-study.netlify.app/feed-case-study/test-api/feed.json")!
         let client = URLSessionHTTPClient()
         let loader = RemoteFeedLoader(url: testServerURL, client: client)
         trackForMemoryLeaks(client)
