@@ -29,6 +29,7 @@
 		C9F69DCE2A4CAF1800843416 /* LoadFeedFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F69DCD2A4CAF1800843416 /* LoadFeedFromCacheUseCaseTests.swift */; };
 		C9F69DD12A4CB0AA00843416 /* FeedStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F69DD02A4CB0AA00843416 /* FeedStoreSpy.swift */; };
 		C9FAB61C2A2C627B007E7E9A /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FAB61B2A2C627B007E7E9A /* XCTestCase+MemoryLeakTracking.swift */; };
+		C9FE87C32A502A91003B6A8D /* ValidateFeedCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE87C22A502A91003B6A8D /* ValidateFeedCacheUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		C9F69DCD2A4CAF1800843416 /* LoadFeedFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
 		C9F69DD02A4CB0AA00843416 /* FeedStoreSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpy.swift; sourceTree = "<group>"; };
 		C9FAB61B2A2C627B007E7E9A /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		C9FE87C22A502A91003B6A8D /* ValidateFeedCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateFeedCacheUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				C9F69DCF2A4CB09F00843416 /* Helpers */,
 				C9720AD32A46D4B900E5FC7D /* CacheFeedUseCaseTests.swift */,
 				C9F69DCD2A4CAF1800843416 /* LoadFeedFromCacheUseCaseTests.swift */,
+				C9FE87C22A502A91003B6A8D /* ValidateFeedCacheUseCaseTests.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9FE87C32A502A91003B6A8D /* ValidateFeedCacheUseCaseTests.swift in Sources */,
 				C9747E2E2A00F11800F61EC1 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 				C93DF8F52A0C10AB00DF198E /* URLSessionHTTPClientTests.swift in Sources */,
 				C9F69DD12A4CB0AA00843416 /* FeedStoreSpy.swift in Sources */,
