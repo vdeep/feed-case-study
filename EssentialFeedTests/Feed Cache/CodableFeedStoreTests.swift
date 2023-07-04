@@ -134,7 +134,7 @@ final class CodableFeedStoreTests: XCTestCase, FailableFeedStore {
     func test_delete_hasNoSideEffectOnEmptyCache() {
         let sut = makeSUT()
         
-        let deletionError = deleteCache(from: sut)
+        deleteCache(from: sut)
         
         expect(sut, toRetrieve: .empty)
     }
@@ -168,7 +168,7 @@ final class CodableFeedStoreTests: XCTestCase, FailableFeedStore {
     func test_delete_hasNoSideEffectsOnDeletionError() {
         let sut = makeSUT(storeURL: noDeletePermissionURL())
         
-        let deletionError = deleteCache(from: sut)
+        deleteCache(from: sut)
         
         expect(sut, toRetrieve: .empty)
     }
@@ -219,6 +219,7 @@ final class CodableFeedStoreTests: XCTestCase, FailableFeedStore {
         return insertionError
     }
     
+    @discardableResult
     private func deleteCache(from sut: FeedStore) -> Error? {
         let exp = expectation(description: "Wait for cache deletion")
         var deletionError: Error?
