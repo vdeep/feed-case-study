@@ -26,7 +26,7 @@ extension LocalFeedLoader {
             
             switch deletionResult {
             case .success:
-                cache(feed, with: completion)
+                self.cache(feed, with: completion)
             
             case let .failure(error):
                 completion(.failure(error))
