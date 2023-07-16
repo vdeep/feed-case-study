@@ -60,15 +60,15 @@
 		C97752132A5D124000966102 /* Prototype */ = {
 			isa = PBXGroup;
 			children = (
+				C97752222A5D124200966102 /* Info.plist */,
 				C97752142A5D124000966102 /* AppDelegate.swift */,
+				C977522C2A5D1D2500966102 /* FeedImageCell.swift */,
+				C977522A2A5D1CC000966102 /* FeedImageViewModel+PrototypeData.swift */,
+				C97752282A5D1AE500966102 /* FeedViewController.swift */,
 				C97752162A5D124000966102 /* SceneDelegate.swift */,
-				C977521A2A5D124000966102 /* Main.storyboard */,
 				C977521D2A5D124200966102 /* Assets.xcassets */,
 				C977521F2A5D124200966102 /* LaunchScreen.storyboard */,
-				C97752222A5D124200966102 /* Info.plist */,
-				C97752282A5D1AE500966102 /* FeedViewController.swift */,
-				C977522A2A5D1CC000966102 /* FeedImageViewModel+PrototypeData.swift */,
-				C977522C2A5D1D2500966102 /* FeedImageCell.swift */,
+				C977521A2A5D124000966102 /* Main.storyboard */,
 			);
 			path = Prototype;
 			sourceTree = "<group>";
