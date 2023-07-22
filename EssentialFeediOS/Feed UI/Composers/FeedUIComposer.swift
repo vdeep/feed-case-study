@@ -25,7 +25,8 @@ public final class FeedUIComposer {
                 FeedImageCellController(
                     viewModel: FeedImageViewModel(
                         model: model,
-                        imageLoader: loader
+                        imageLoader: loader,
+                        imageTransformer: UIImage.init
                     )
                 )
             }
