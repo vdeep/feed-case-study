@@ -17,18 +17,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="bE5-jl-8Wp" customClass="ErrorView" customModule="EssentialFeediOS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="16"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8p-O6-zeA">
+                                    <rect key="frame" x="8" y="8" width="377" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <constraints>
+                                <constraint firstItem="o8p-O6-zeA" firstAttribute="top" secondItem="bE5-jl-8Wp" secondAttribute="topMargin" id="3IU-tb-RaM"/>
+                                <constraint firstItem="o8p-O6-zeA" firstAttribute="leading" secondItem="bE5-jl-8Wp" secondAttribute="leadingMargin" id="Cy0-fD-I92"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="o8p-O6-zeA" secondAttribute="trailing" id="hrc-FN-aRB"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="o8p-O6-zeA" secondAttribute="bottom" id="ovK-Ad-Nbp"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="label" destination="o8p-O6-zeA" id="dJe-GD-m5a"/>
+                            </connections>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="6OU-fJ-GwQ">
-                            <rect key="frame" x="0.0" y="674" width="393" height="16"/>
+                            <rect key="frame" x="0.0" y="692" width="393" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="580" id="X5o-WH-VtM" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="66" width="393" height="580"/>
+                                <rect key="frame" x="0.0" y="84" width="393" height="580"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X5o-WH-VtM" id="0pa-1k-ASV">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="580"/>
@@ -157,6 +174,9 @@
         <image name="pin" width="10" height="14.333333015441895"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
