@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C9043EEB2A72DEC300EC4F5F /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9043EED2A72DEC300EC4F5F /* Feed.strings */; };
+		C9043EF22A72E06900EC4F5F /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9043EF12A72E06900EC4F5F /* FeedPresenter.swift */; };
+		C9043EF32A72E13D00EC4F5F /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9043EED2A72DEC300EC4F5F /* Feed.strings */; };
 		C90FA9522A5703E400EC1E40 /* CoreDataFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90FA9512A5703E400EC1E40 /* CoreDataFeedStoreTests.swift */; };
 		C90FA9542A57068600EC1E40 /* CoreDataFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90FA9532A57068600EC1E40 /* CoreDataFeedStore.swift */; };
 		C915E2812A63CCFC00F6C751 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C915E2802A63CCFC00F6C751 /* FeedViewController.swift */; };
@@ -146,6 +147,7 @@
 		C9043EEC2A72DEC300EC4F5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		C9043EEE2A72DEC700EC4F5F /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
 		C9043EEF2A72DEC900EC4F5F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
+		C9043EF12A72E06900EC4F5F /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		C90FA9512A5703E400EC1E40 /* CoreDataFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStoreTests.swift; sourceTree = "<group>"; };
 		C90FA9532A57068600EC1E40 /* CoreDataFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStore.swift; sourceTree = "<group>"; };
 		C915E2802A63CCFC00F6C751 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -281,6 +283,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C9043EF02A72E04B00EC4F5F /* Feed Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C9043EF12A72E06900EC4F5F /* FeedPresenter.swift */,
+				C9043EED2A72DEC300EC4F5F /* Feed.strings */,
+			);
+			path = "Feed Presentation";
+			sourceTree = "<group>";
+		};
 		C92B74A02A0524CE00038C81 /* Feed API */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +369,7 @@
 		C9747E102A00ECC300F61EC1 /* EssentialFeed */ = {
 			isa = PBXGroup;
 			children = (
+				C9043EF02A72E04B00EC4F5F /* Feed Presentation */,
 				C99E5FD42A48C8D60082A76C /* FeedCache */,
 				C9747E122A00ECC300F61EC1 /* EssentialFeed.docc */,
 				C9747E112A00ECC300F61EC1 /* EssentialFeed.h */,
@@ -403,7 +415,6 @@
 			isa = PBXGroup;
 			children = (
 				C989831E2A71938C00D67A94 /* FeedPresenterTests.swift */,
-				C9043EED2A72DEC300EC4F5F /* Feed.strings */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -808,6 +819,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9043EF32A72E13D00EC4F5F /* Feed.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,7 +827,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9043EEB2A72DEC300EC4F5F /* Feed.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,6 +876,7 @@
 				C9BA1EB52A570BCD00E90A9C /* FeedStore.xcdatamodeld in Sources */,
 				C99E5FD82A48C96D0082A76C /* FeedStore.swift in Sources */,
 				C9C84E792A2C744C002325B1 /* URLSessionHTTPClient.swift in Sources */,
+				C9043EF22A72E06900EC4F5F /* FeedPresenter.swift in Sources */,
 				C9747E312A00F72500F61EC1 /* RemoteFeedLoader.swift in Sources */,
 				C92B749D2A0519DD00038C81 /* HTTPClient.swift in Sources */,
 				C9BA1EBA2A572D3A00E90A9C /* CoreDataHelpers.swift in Sources */,
