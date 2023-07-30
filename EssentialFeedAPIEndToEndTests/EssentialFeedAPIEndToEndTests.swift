@@ -42,9 +42,9 @@ final class EssentialFeedAPIEndToEndTests: XCTestCase {
     
     // MARK: - helpers
     private func getFeedResult(file: StaticString = #file, line: UInt = #line) -> FeedLoader.Result? {
-        let testServerURL = URL(string: "https://vdeep-feed-case-study.netlify.app/feed-case-study/test-api/feed.json")!
+        let url = testServerURL.appendingPathComponent("feed.json")
         let client = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
-        let loader = RemoteFeedLoader(url: testServerURL, client: client)
+        let loader = RemoteFeedLoader(url: url, client: client)
         trackForMemoryLeaks(client, file: file, line: line)
         trackForMemoryLeaks(loader, file: file, line: line)
         
@@ -60,7 +60,7 @@ final class EssentialFeedAPIEndToEndTests: XCTestCase {
     }
     
     private func getFeedImageDataResult(file: StaticString = #file, line: UInt = #line) -> FeedImageDataLoader.Result? {
-        let testServerURL = URL(string: "https://vdeep-feed-case-study.netlify.app/feed-case-study/test-api/image.png")!
+        let url = testServerURL.appendingPathComponent("image.png")
         let client = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
         let loader = RemoteFeedImageDataLoader(client: client)
         trackForMemoryLeaks(client, file: file, line: line)
@@ -69,13 +69,17 @@ final class EssentialFeedAPIEndToEndTests: XCTestCase {
         let exp = expectation(description: "Wait for load completion")
         
         var receivedResult: FeedImageDataLoader.Result?
-        _ = loader.loadImageData(from: testServerURL) { result in
+        _ = loader.loadImageData(from: url) { result in
             receivedResult = result
             exp.fulfill()
         }
         wait(for: [exp], timeout: 10.0)
         
         return receivedResult
+    }
+    
+    private var testServerURL: URL {
+        URL(string: "https://vdeep-feed-case-study.netlify.app/feed-case-study/test-api/")!
     }
     
     private func expectedImage(at index: Int) -> FeedImage {
