@@ -552,13 +552,13 @@
 		C9BA1EB72A572C9300E90A9C /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				C9BA1EB32A570BCD00E90A9C /* FeedStore.xcdatamodeld */,
 				C90FA9532A57068600EC1E40 /* CoreDataFeedStore.swift */,
+				C989E7432A7676C7005D5A44 /* CoreDataFeedStore+FeedImageDataLoader.swift */,
+				C989E7452A767B7C005D5A44 /* CoreDataFeedStore+FeedStore.swift */,
 				C9BA1EB92A572D3A00E90A9C /* CoreDataHelpers.swift */,
 				C9BA1EBB2A572DA100E90A9C /* ManagedCache.swift */,
 				C9BA1EBD2A572DD000E90A9C /* ManagedFeedImage.swift */,
-				C989E7432A7676C7005D5A44 /* CoreDataFeedStore+FeedImageDataLoader.swift */,
-				C989E7452A767B7C005D5A44 /* CoreDataFeedStore+FeedStore.swift */,
+				C9BA1EB32A570BCD00E90A9C /* FeedStore.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
