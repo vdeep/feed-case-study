@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "88EEEE9E-8DF1-4039-9C37-4166BC458E69",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:EssentialApp\/EssentialApp.xcodeproj",
+        "identifier" : "C9EFECD02A7CC08500D5AB5E",
+        "name" : "EssentialAppUIAcceptanceTests"
+      }
+    }
+  ],
+  "version" : 1
+}
