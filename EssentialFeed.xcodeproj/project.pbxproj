@@ -225,7 +225,7 @@
 		C9BA1EBD2A572DD000E90A9C /* ManagedFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedFeedImage.swift; sourceTree = "<group>"; };
 		C9BD3D522A631C6B007E32F6 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BD3D592A631C6C007E32F6 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9BD3D672A631CDE007E32F6 /* EssentialFeediOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = EssentialFeediOS.xctestplan; path = EssentialFeediOS/EssentialFeediOS.xctestplan; sourceTree = "<group>"; };
+		C9BD3D672A631CDE007E32F6 /* EssentialFeediOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeediOS.xctestplan; sourceTree = "<group>"; };
 		C9BD3D682A631E48007E32F6 /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI_iOS.xctestplan; sourceTree = "<group>"; };
 		C9BD3D692A63AA30007E32F6 /* FeedUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIIntegrationTests.swift; sourceTree = "<group>"; };
 		C9C375D12A65B70D00AA29CC /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
@@ -395,10 +395,6 @@
 		C9747E042A00ECC300F61EC1 = {
 			isa = PBXGroup;
 			children = (
-				C9BD3D682A631E48007E32F6 /* CI_iOS.xctestplan */,
-				C9BD3D672A631CDE007E32F6 /* EssentialFeediOS.xctestplan */,
-				C952D3172A5EBE0800B5E21B /* EssentialFeedAPIEndToEndTests.xctestplan */,
-				C96558F32A57E553006DBF65 /* EssentialFeedCacheIntegrationTests.xctestplan */,
 				C9C84E8A2A2CAAC9002325B1 /* TestPlans */,
 				C9747E102A00ECC300F61EC1 /* EssentialFeed */,
 				C9747E1C2A00ECC400F61EC1 /* EssentialFeedTests */,
@@ -604,6 +600,10 @@
 		C9C84E8A2A2CAAC9002325B1 /* TestPlans */ = {
 			isa = PBXGroup;
 			children = (
+				C9BD3D682A631E48007E32F6 /* CI_iOS.xctestplan */,
+				C9BD3D672A631CDE007E32F6 /* EssentialFeediOS.xctestplan */,
+				C952D3172A5EBE0800B5E21B /* EssentialFeedAPIEndToEndTests.xctestplan */,
+				C96558F32A57E553006DBF65 /* EssentialFeedCacheIntegrationTests.xctestplan */,
 				C9C84E892A2CAA12002325B1 /* CI.xctestplan */,
 			);
 			name = TestPlans;
