@@ -527,11 +527,11 @@
 		C9B047692A69A62A0080E16B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C9AD1C2E2A711E8D004F263B /* Helpers */,
-				C9F6C7842A64241A0023CC48 /* FeedImageCell.swift */,
 				C9F322062A6E894100D32AC5 /* Feed.storyboard */,
-				C9F322082A6E89A900D32AC5 /* Feed.xcassets */,
 				C9AD1C2C2A704F01004F263B /* ErrorView.swift */,
+				C9F6C7842A64241A0023CC48 /* FeedImageCell.swift */,
+				C9F322082A6E89A900D32AC5 /* Feed.xcassets */,
+				C9AD1C2E2A711E8D004F263B /* Helpers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
