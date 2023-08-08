@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C95617AE2A82BF8B00CE9B7F /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95617AD2A82BF8B00CE9B7F /* UIView+TestHelpers.swift */; };
 		C962092D2A79568300809D51 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C962092C2A79568300809D51 /* FeedLoaderWithFallbackCompositeTests.swift */; };
 		C962092F2A7975EC00809D51 /* FeedLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C962092E2A7975EC00809D51 /* FeedLoaderWithFallbackComposite.swift */; };
 		C96209312A7976AB00809D51 /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96209302A7976AB00809D51 /* FeedImageDataLoaderWithFallbackCompositeTests.swift */; };
@@ -80,6 +81,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C95617AD2A82BF8B00CE9B7F /* UIView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TestHelpers.swift"; sourceTree = "<group>"; };
 		C96209232A79564C00809D51 /* EssentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C962092C2A79568300809D51 /* FeedLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
 		C962092E2A7975EC00809D51 /* FeedLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				C96209352A797B8A00809D51 /* XCTestCase+MemoryLeakTracking.swift */,
 				C98BA9172A7FB257007DACB8 /* HTTPClientStub.swift */,
 				C98BA9192A7FB2A6007DACB8 /* InMemoryFeedStore.swift */,
+				C95617AD2A82BF8B00CE9B7F /* UIView+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				C98BA90C2A7F9D4A007DACB8 /* FeedUIIntegrationTests+LoaderSpy.swift in Sources */,
 				C98BA9182A7FB257007DACB8 /* HTTPClientStub.swift in Sources */,
 				C98BA90D2A7F9D4A007DACB8 /* UIRefreshControl+TestHelpers.swift in Sources */,
+				C95617AE2A82BF8B00CE9B7F /* UIView+TestHelpers.swift in Sources */,
 				C98BA9102A7F9D4A007DACB8 /* FeedImageCell+TestHelpers.swift in Sources */,
 				C98BA90F2A7F9D4A007DACB8 /* UIButton+TestHelpers.swift in Sources */,
 				C98BA9162A7FA6EF007DACB8 /* FeedAcceptanceTests.swift in Sources */,
