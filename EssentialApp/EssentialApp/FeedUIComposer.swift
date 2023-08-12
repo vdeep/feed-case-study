@@ -5,6 +5,7 @@
 //  Created by Vishal on 21/07/23.
 //
 
+import Combine
 import UIKit
 import EssentialFeed
 import EssentialFeediOS
@@ -12,9 +13,12 @@ import EssentialFeediOS
 public final class FeedUIComposer {
     private init() {}
     
-    public static func feedComposedWith(feedLoader: FeedLoader, imageLoader: FeedImageDataLoader) -> FeedViewController {
+    public static func feedComposedWith(
+        feedLoader: @escaping () -> FeedLoader.Publisher,
+        imageLoader: FeedImageDataLoader
+    ) -> FeedViewController {
         let presentationAdapter = FeedLoaderPresentationAdapter(
-            feedLoader: MainQueueDispatchDecorator(decoratee: feedLoader)
+            feedLoader: { feedLoader().dispatchOnMainQueue() }
         )
         
         let feedController = makeFeedViewController(
