@@ -319,7 +319,6 @@
 			children = (
 				C9747E2D2A00F11800F61EC1 /* LoadFeedFromRemoteUseCaseTests.swift */,
 				C96560012A7402E60022BC4E /* LoadFeedImageDataFromRemoteUseCaseTests.swift */,
-				C9FC37B32A89552B008AEDED /* LoadImageCommentsFromRemoteUseCaseTests.swift */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -417,6 +416,7 @@
 		C9747E102A00ECC300F61EC1 /* EssentialFeed */ = {
 			isa = PBXGroup;
 			children = (
+				C9FC37C32A8BB2E7008AEDED /* Image Comments API */,
 				C9747E122A00ECC300F61EC1 /* EssentialFeed.docc */,
 				C9747E112A00ECC300F61EC1 /* EssentialFeed.h */,
 				C9747E2F2A00F6EB00F61EC1 /* Feed API */,
@@ -433,6 +433,7 @@
 		C9747E1C2A00ECC400F61EC1 /* EssentialFeedTests */ = {
 			isa = PBXGroup;
 			children = (
+				C9FC37C42A8BB310008AEDED /* Image Comments API */,
 				C92B74A02A0524CE00038C81 /* Feed API */,
 				C9720AD22A46D49E00E5FC7D /* Feed Cache */,
 				C989831D2A71937400D67A94 /* Feed Presentation */,
@@ -459,11 +460,9 @@
 			isa = PBXGroup;
 			children = (
 				C92B749E2A051A4800038C81 /* FeedItemsMapper.swift */,
-				C9FC37B72A895735008AEDED /* ImageCommentsMapper.swift */,
 				C96560082A7582050022BC4E /* RemoteFeedImageDataLoader.swift */,
 				C98282222A49F4E500F6A83A /* RemoteFeedItem.swift */,
 				C9747E302A00F72500F61EC1 /* RemoteFeedLoader.swift */,
-				C9FC37B52A895668008AEDED /* RemoteImageCommentsLoader.swift */,
 				C965600A2A763BB40022BC4E /* Helpers */,
 			);
 			path = "Feed API";
@@ -675,6 +674,23 @@
 				C93DF8F42A0C10AB00DF198E /* URLSessionHTTPClientTests.swift */,
 			);
 			path = "Shared API Infra";
+			sourceTree = "<group>";
+		};
+		C9FC37C32A8BB2E7008AEDED /* Image Comments API */ = {
+			isa = PBXGroup;
+			children = (
+				C9FC37B72A895735008AEDED /* ImageCommentsMapper.swift */,
+				C9FC37B52A895668008AEDED /* RemoteImageCommentsLoader.swift */,
+			);
+			path = "Image Comments API";
+			sourceTree = "<group>";
+		};
+		C9FC37C42A8BB310008AEDED /* Image Comments API */ = {
+			isa = PBXGroup;
+			children = (
+				C9FC37B32A89552B008AEDED /* LoadImageCommentsFromRemoteUseCaseTests.swift */,
+			);
+			path = "Image Comments API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
