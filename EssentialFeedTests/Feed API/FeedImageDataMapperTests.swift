@@ -22,4 +22,15 @@ final class FeedImageDataMapperTests: XCTestCase {
             )
         }
     }
+
+    func test_map_deliversInvalidDataErrorOn200HTTPResponseWithEmptyData() {
+        let emptyData = Data()
+
+        XCTAssertThrowsError(
+            try FeedImageDataMapper.map(
+                emptyData,
+                from: HTTPURLResponse(statusCode: 200)
+            )
+        )
+    }
 }
