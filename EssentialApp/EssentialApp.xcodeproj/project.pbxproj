@@ -181,6 +181,7 @@
 			children = (
 				C9EEAAE72A768F13001FB6C8 /* Info.plist */,
 				C9EEAAD92A768F11001FB6C8 /* AppDelegate.swift */,
+				C97C29272A87C8C200CBCAA9 /* CombineHelpers.swift */,
 				C98BA8F52A7F9C49007DACB8 /* FeedImageDataLoaderPresentationAdapter.swift */,
 				C98BA8F72A7F9C5C007DACB8 /* FeedLoaderPresentationAdapter.swift */,
 				C98BA8F92A7F9C63007DACB8 /* FeedUIComposer.swift */,
@@ -190,7 +191,6 @@
 				C98BA8FF2A7F9CFB007DACB8 /* WeakRefVirtualProxy.swift */,
 				C9EEAAE22A768F13001FB6C8 /* Assets.xcassets */,
 				C9EEAAE42A768F13001FB6C8 /* LaunchScreen.storyboard */,
-				C97C29272A87C8C200CBCAA9 /* CombineHelpers.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
