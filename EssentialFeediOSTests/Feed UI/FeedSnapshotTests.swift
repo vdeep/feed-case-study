@@ -82,7 +82,7 @@ private extension ListViewController {
                 delegate: stub
             )
             stub.controller = cellController
-            return CellController(cellController)
+            return CellController(id: UUID(), cellController)
         }
         
         display(cells)
