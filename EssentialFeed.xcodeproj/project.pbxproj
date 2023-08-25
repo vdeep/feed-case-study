@@ -13,6 +13,7 @@
 		C9036DF52A9874AE000F4733 /* IMAGE_COMMENTS_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = C9036DF32A9874AE000F4733 /* IMAGE_COMMENTS_dark.png */; };
 		C9036DF62A9874AE000F4733 /* IMAGE_COMMENTS_light.png in Resources */ = {isa = PBXBuildFile; fileRef = C9036DF42A9874AE000F4733 /* IMAGE_COMMENTS_light.png */; };
 		C9036DF82A987593000F4733 /* ImageCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9036DF72A987593000F4733 /* ImageCommentCell.swift */; };
+		C9036DFA2A98C7AD000F4733 /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9036DF92A98C7AD000F4733 /* CellController.swift */; };
 		C9043EF22A72E06900EC4F5F /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9043EF12A72E06900EC4F5F /* FeedPresenter.swift */; };
 		C9043EF32A72E13D00EC4F5F /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9043EED2A72DEC300EC4F5F /* Feed.strings */; };
 		C9043EF52A72E18B00EC4F5F /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9043EF42A72E18B00EC4F5F /* FeedViewModel.swift */; };
@@ -180,6 +181,7 @@
 		C9036DF32A9874AE000F4733 /* IMAGE_COMMENTS_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMAGE_COMMENTS_dark.png; sourceTree = "<group>"; };
 		C9036DF42A9874AE000F4733 /* IMAGE_COMMENTS_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMAGE_COMMENTS_light.png; sourceTree = "<group>"; };
 		C9036DF72A987593000F4733 /* ImageCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentCell.swift; sourceTree = "<group>"; };
+		C9036DF92A98C7AD000F4733 /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
 		C9043EEC2A72DEC300EC4F5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		C9043EEE2A72DEC700EC4F5F /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
 		C9043EEF2A72DEC900EC4F5F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
@@ -748,6 +750,7 @@
 			isa = PBXGroup;
 			children = (
 				C915E2802A63CCFC00F6C751 /* ListViewController.swift */,
+				C9036DF92A98C7AD000F4733 /* CellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1227,6 +1230,7 @@
 				C95617A82A82B47100CE9B7F /* UITableView+HeaderSizing.swift in Sources */,
 				C9AD1C2D2A704F01004F263B /* ErrorView.swift in Sources */,
 				C9C375D22A65B70D00AA29CC /* UIView+Shimmering.swift in Sources */,
+				C9036DFA2A98C7AD000F4733 /* CellController.swift in Sources */,
 				C9F3220D2A6E9DE700D32AC5 /* UITableView+Dequeueing.swift in Sources */,
 				C9AD1C322A711F3D004F263B /* UIRefreshControl+Helpers.swift in Sources */,
 				C915E2812A63CCFC00F6C751 /* ListViewController.swift in Sources */,
