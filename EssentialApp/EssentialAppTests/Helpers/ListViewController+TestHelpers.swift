@@ -9,11 +9,11 @@ import UIKit
 import EssentialFeediOS
 
 extension ListViewController {
-    override public func loadViewIfNeeded() {
-        super.loadViewIfNeeded()
-
-        tableView.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
-    }
+//    override public func loadViewIfNeeded() {
+//        super.loadViewIfNeeded()
+//
+//        tableView.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
+//    }
 
     func simulateUserInitiatedFeedReload() {
         refreshControl?.simulatePullToRefresh()
@@ -22,6 +22,17 @@ extension ListViewController {
     @discardableResult
     func simulateFeedImageViewVisible(at index: Int) -> FeedImageCell? {
         return feedImageView(at: index) as? FeedImageCell
+    }
+
+    @discardableResult
+    func simulateFeedImageBecomingVisibleAgain(at row: Int) -> FeedImageCell? {
+        let view = simulateFeedImageViewNotVisible(at: row)
+
+        let delegate = tableView.delegate
+        let index = IndexPath(row: row, section: feedImagesSection)
+        delegate?.tableView?(tableView, willDisplay: view!, forRowAt: index)
+
+        return view
     }
     
     @discardableResult
