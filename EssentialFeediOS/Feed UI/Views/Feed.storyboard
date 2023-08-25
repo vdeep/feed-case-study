@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mfP-Eq-6J2">
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,38 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="bE5-jl-8Wp" customClass="ErrorView" customModule="EssentialFeediOS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8p-O6-zeA">
-                                    <rect key="frame" x="8" y="8" width="377" height="18"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" red="1" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <gestureRecognizers/>
-                            <constraints>
-                                <constraint firstItem="o8p-O6-zeA" firstAttribute="top" secondItem="bE5-jl-8Wp" secondAttribute="topMargin" id="3IU-tb-RaM"/>
-                                <constraint firstItem="o8p-O6-zeA" firstAttribute="leading" secondItem="bE5-jl-8Wp" secondAttribute="leadingMargin" id="Cy0-fD-I92"/>
-                                <constraint firstAttribute="trailingMargin" secondItem="o8p-O6-zeA" secondAttribute="trailing" id="hrc-FN-aRB"/>
-                                <constraint firstAttribute="bottomMargin" secondItem="o8p-O6-zeA" secondAttribute="bottom" id="ovK-Ad-Nbp"/>
-                            </constraints>
-                            <connections>
-                                <outlet property="label" destination="o8p-O6-zeA" id="dJe-GD-m5a"/>
-                                <outletCollection property="gestureRecognizers" destination="OFF-gX-IcN" appends="YES" id="nEw-wC-h3H"/>
-                            </connections>
-                        </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="6OU-fJ-GwQ">
-                            <rect key="frame" x="0.0" y="692" width="393" height="16"/>
+                            <rect key="frame" x="0.0" y="658" width="393" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="580" id="X5o-WH-VtM" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="84" width="393" height="580"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="580"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X5o-WH-VtM" id="0pa-1k-ASV">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="580"/>
@@ -168,16 +145,9 @@
                             <action selector="refresh" destination="mfP-Eq-6J2" eventType="valueChanged" id="3Ve-HC-FBi"/>
                         </connections>
                     </refreshControl>
-                    <connections>
-                        <outlet property="errorView" destination="bE5-jl-8Wp" id="ycF-dO-GNT"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fge-92-3jX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="OFF-gX-IcN">
-                    <connections>
-                        <action selector="hideMessageAnimated" destination="bE5-jl-8Wp" id="DQc-6e-8s3"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="OFF-gX-IcN"/>
             </objects>
             <point key="canvasLocation" x="1043.5114503816794" y="-35.211267605633807"/>
         </scene>
