@@ -84,6 +84,22 @@ public final class ErrorView: UIButton {
         configuration?.contentInsets = .zero
         onHide?()
     }
+
+    func makeContainer() -> UIView {
+        let container = UIView()
+        container.backgroundColor = .clear
+        container.addSubview(self)
+
+        translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            leadingAnchor.constraint(equalTo: container.leadingAnchor),
+            trailingAnchor.constraint(equalTo: container.trailingAnchor),
+            topAnchor.constraint(equalTo: container.topAnchor),
+            bottomAnchor.constraint(equalTo: container.bottomAnchor)
+        ])
+
+        return container
+    }
 }
 
 extension UIColor {
