@@ -114,6 +114,10 @@
 		C9ECF8592A97DABB00BDB3E7 /* FEED_WITH_CONTENT_light.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ECF8532A97DABB00BDB3E7 /* FEED_WITH_CONTENT_light.png */; };
 		C9ECF85A2A97DABB00BDB3E7 /* FEED_WITH_FAILED_IMAGE_LOADING_light.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ECF8542A97DABB00BDB3E7 /* FEED_WITH_FAILED_IMAGE_LOADING_light.png */; };
 		C9ECF85B2A97DABB00BDB3E7 /* LIST_WITH_ERROR_MESSAGE_light.png in Resources */ = {isa = PBXBuildFile; fileRef = C9ECF8552A97DABB00BDB3E7 /* LIST_WITH_ERROR_MESSAGE_light.png */; };
+		C9F2DB082AA0B299004EFD2A /* LoadMoreCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F2DB072AA0B299004EFD2A /* LoadMoreCellController.swift */; };
+		C9F2DB0B2AA0B2FD004EFD2A /* FEED_WITH_LOAD_MORE_INDICATOR_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = C9F2DB092AA0B2FD004EFD2A /* FEED_WITH_LOAD_MORE_INDICATOR_dark.png */; };
+		C9F2DB0C2AA0B2FD004EFD2A /* FEED_WITH_LOAD_MORE_INDICATOR_light.png in Resources */ = {isa = PBXBuildFile; fileRef = C9F2DB0A2AA0B2FD004EFD2A /* FEED_WITH_LOAD_MORE_INDICATOR_light.png */; };
+		C9F2DB0E2AA0BECE004EFD2A /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F2DB0D2AA0BECE004EFD2A /* LoadMoreCell.swift */; };
 		C9F322072A6E894100D32AC5 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9F322062A6E894100D32AC5 /* Feed.storyboard */; };
 		C9F322092A6E89A900D32AC5 /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9F322082A6E89A900D32AC5 /* Feed.xcassets */; };
 		C9F3220D2A6E9DE700D32AC5 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F3220C2A6E9DE700D32AC5 /* UITableView+Dequeueing.swift */; };
@@ -296,6 +300,10 @@
 		C9ECF8532A97DABB00BDB3E7 /* FEED_WITH_CONTENT_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_CONTENT_light.png; sourceTree = "<group>"; };
 		C9ECF8542A97DABB00BDB3E7 /* FEED_WITH_FAILED_IMAGE_LOADING_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_FAILED_IMAGE_LOADING_light.png; sourceTree = "<group>"; };
 		C9ECF8552A97DABB00BDB3E7 /* LIST_WITH_ERROR_MESSAGE_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LIST_WITH_ERROR_MESSAGE_light.png; sourceTree = "<group>"; };
+		C9F2DB072AA0B299004EFD2A /* LoadMoreCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreCellController.swift; sourceTree = "<group>"; };
+		C9F2DB092AA0B2FD004EFD2A /* FEED_WITH_LOAD_MORE_INDICATOR_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_LOAD_MORE_INDICATOR_dark.png; sourceTree = "<group>"; };
+		C9F2DB0A2AA0B2FD004EFD2A /* FEED_WITH_LOAD_MORE_INDICATOR_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_LOAD_MORE_INDICATOR_light.png; sourceTree = "<group>"; };
+		C9F2DB0D2AA0BECE004EFD2A /* LoadMoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
 		C9F322062A6E894100D32AC5 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		C9F322082A6E89A900D32AC5 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 		C9F3220C2A6E9DE700D32AC5 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
@@ -641,6 +649,7 @@
 			isa = PBXGroup;
 			children = (
 				C9D3CA492A6AFA05001AD0A3 /* FeedImageCellController.swift */,
+				C9F2DB072AA0B299004EFD2A /* LoadMoreCellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -650,6 +659,7 @@
 			children = (
 				C9F322062A6E894100D32AC5 /* Feed.storyboard */,
 				C9F6C7842A64241A0023CC48 /* FeedImageCell.swift */,
+				C9F2DB0D2AA0BECE004EFD2A /* LoadMoreCell.swift */,
 				C9F322082A6E89A900D32AC5 /* Feed.xcassets */,
 				C9AD1C2E2A711E8D004F263B /* Helpers */,
 			);
@@ -832,6 +842,8 @@
 				C9ECF8512A97DABB00BDB3E7 /* FEED_WITH_FAILED_IMAGE_LOADING_dark.png */,
 				C94B8C452A98FA7B008D3033 /* FEED_WITH_FAILED_IMAGE_LOADING_light_extraExtraExtraLarge.png */,
 				C9ECF8542A97DABB00BDB3E7 /* FEED_WITH_FAILED_IMAGE_LOADING_light.png */,
+				C9F2DB092AA0B2FD004EFD2A /* FEED_WITH_LOAD_MORE_INDICATOR_dark.png */,
+				C9F2DB0A2AA0B2FD004EFD2A /* FEED_WITH_LOAD_MORE_INDICATOR_light.png */,
 			);
 			path = snapshots;
 			sourceTree = "<group>";
@@ -1144,8 +1156,10 @@
 				C9ECF84B2A97DA9800BDB3E7 /* EMPTY_LIST_dark.png in Resources */,
 				C9ECF85B2A97DABB00BDB3E7 /* LIST_WITH_ERROR_MESSAGE_light.png in Resources */,
 				C9ECF8592A97DABB00BDB3E7 /* FEED_WITH_CONTENT_light.png in Resources */,
+				C9F2DB0B2AA0B2FD004EFD2A /* FEED_WITH_LOAD_MORE_INDICATOR_dark.png in Resources */,
 				C9ECF8582A97DABB00BDB3E7 /* FEED_WITH_CONTENT_dark.png in Resources */,
 				C94B8C492A98FA9E008D3033 /* IMAGE_COMMENTS_light_extraExtraExtraLarge.png in Resources */,
+				C9F2DB0C2AA0B2FD004EFD2A /* FEED_WITH_LOAD_MORE_INDICATOR_light.png in Resources */,
 				C9036DF52A9874AE000F4733 /* IMAGE_COMMENTS_dark.png in Resources */,
 				C94B8C432A98F76E008D3033 /* LIST_WITH_ERROR_MESSAGE_light_extraExtraExtraLarge.png in Resources */,
 			);
@@ -1267,10 +1281,12 @@
 				C9AD1C322A711F3D004F263B /* UIRefreshControl+Helpers.swift in Sources */,
 				C915E2812A63CCFC00F6C751 /* ListViewController.swift in Sources */,
 				C9F6C7852A64241A0023CC48 /* FeedImageCell.swift in Sources */,
+				C9F2DB0E2AA0BECE004EFD2A /* LoadMoreCell.swift in Sources */,
 				C9D3CA4A2A6AFA05001AD0A3 /* FeedImageCellController.swift in Sources */,
 				C9036DEE2A9872F6000F4733 /* ImageCommentCellController.swift in Sources */,
 				C9F3220F2A6E9E2800D32AC5 /* UIImageView+Animations.swift in Sources */,
 				C9036DF82A987593000F4733 /* ImageCommentCell.swift in Sources */,
+				C9F2DB082AA0B299004EFD2A /* LoadMoreCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
