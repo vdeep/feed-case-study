@@ -50,6 +50,18 @@ class FeedUIIntegrationTests: XCTestCase {
         sut.simulateUserInitiatedReload()
         XCTAssertEqual(loader.loadFeedCallCount, 3, "Expected a third loading request once user initiates another reload")
     }
+
+    func test_loadMoreActions_requestMoreFeedFromLoader() {
+        let (sut, loader) = makeSUT()
+
+        sut.loadViewIfNeeded()
+        loader.completeFeedLoading()
+
+        XCTAssertEqual(loader.loadMoreCallCount, 0, "Expected no requests until load more action")
+
+        sut.simulateLoadMoreFeedAction()
+        XCTAssertEqual(loader.loadMoreCallCount, 1, "Expected load more request")
+    }
     
     func test_loadingFeedIndicator_isVisibleWhileLoadingFeed() {
         let (sut, loader) = makeSUT()
@@ -416,8 +428,8 @@ class FeedUIIntegrationTests: XCTestCase {
             imageLoader: loader.loadImageDataPublisher,
             selection: selection
         )
-        trackForMemoryLeaks(loader, file: file, line: line)
         trackForMemoryLeaks(sut, file: file, line: line)
+        trackForMemoryLeaks(loader, file: file, line: line)
         return (sut, loader)
     }
     
