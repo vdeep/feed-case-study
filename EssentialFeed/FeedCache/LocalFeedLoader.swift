@@ -35,22 +35,18 @@ extension LocalFeedLoader {
 }
 
 extension LocalFeedLoader {
-    public typealias ValidationResult = Result<Void, Error>
-
     enum ValidationError: Error {
         case invalidCache
     }
     
-    public func validateCache(completion: @escaping (ValidationResult) -> Void) {
-        completion(ValidationResult {
-            do {
-                if let cache = try store.retrieve(), !FeedCachePolicy.validate(cache.timestamp, against: currentDate()) {
-                    throw ValidationError.invalidCache
-                }
-            } catch {
-                try store.deleteCachedFeed()
+    public func validateCache() throws {
+        do {
+            if let cache = try store.retrieve(), !FeedCachePolicy.validate(cache.timestamp, against: currentDate()) {
+                throw ValidationError.invalidCache
             }
-        })
+        } catch {
+            try store.deleteCachedFeed()
+        }
     }
 }
 
