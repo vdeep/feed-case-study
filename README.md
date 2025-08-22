@@ -1,6 +1,6 @@
 # Essential Feed App – Image Feed Feature
 
-[![Build Status](https://travis-ci.com/essentialdevelopercom/essential-feed-case-study.svg?branch=master)](https://travis-ci.com/essentialdevelopercom/essential-feed-case-study)
+[![Xcode - Build Status](https://github.com/vdeep/feed-case-study/actions/workflows/CI.yml/badge.svg)](https://github.com/vdeep/feed-case-study/actions/workflows/CI.yml)
 
 ## BDD Specs
 
@@ -179,7 +179,7 @@ Given the customer doesn't have connectivity
 
 ## Architecture
 
-![Feed Loading Feature](feed_architecture.png)
+![Feed Loading Feature](architecture.png)
 
 ## Model Specs
 
