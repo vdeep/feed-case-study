@@ -29,7 +29,7 @@ public final class ErrorView: UIButton {
         paragraphStyle.alignment = NSTextAlignment.center
 
         var attributes = AttributeContainer()
-        attributes.paragraphStyle = paragraphStyle
+        attributes.merge(.init([.paragraphStyle: paragraphStyle]))
         attributes.font = UIFont.preferredFont(forTextStyle: .body)
         return attributes
     }
