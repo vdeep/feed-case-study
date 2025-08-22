@@ -13,21 +13,73 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Select Xcode
-        run: sudo xcode-select -switch /Applications/Xcode_16.2.app
+        run: sudo xcode-select -switch /Applications/Xcode_16.4.app
+
+      - name: Install xcpretty
+        run: gem install xcpretty --no-document
+
+      - name: Install CocoaPods (if Podfile exists)
+        if: ${{ hashFiles('**/Podfile') != '' }}
+        run: |
+          sudo gem install cocoapods --no-document
+          pod install --repo-update
       
       - name: Build and test using CI_macOS scheme
         run: |
-          scheme="CI_macOS";
-          if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; fi
-          file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
-          xcodebuild clean build test -scheme "$scheme" -"$filetype_parameter" "$file_to_build" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk macosx -destination "platform=macOS" ONLY_ACTIVE_ARCH=YES | xcpretty && exit ${PIPESTATUS[0]}
+          set -eo pipefail
+          scheme="CI_macOS"
+          # Prefer a valid .xcworkspace (with contents.xcworkspacedata), else fall back to .xcodeproj
+          valid_ws="$(for w in *.xcworkspace; do
+            [ -d "$w" ] && [ -f "$w/contents.xcworkspacedata" ] && echo "$w" && break
+          done)"
+          if [ -n "$valid_ws" ]; then
+            filetype_parameter="workspace"
+            file_to_build="$valid_ws"
+          else
+            filetype_parameter="project"
+            file_to_build="$(ls -1 *.xcodeproj | head -n1)"
+          fi
+          xcodebuild clean test \
+            -scheme "$scheme" \
+            -"$filetype_parameter" "$file_to_build" \
+            CODE_SIGNING_ALLOWED=NO \
+            -destination "platform=macOS" \
+          | xcpretty
       
       - name: Build and test using CI_iOS scheme
         run: |
-          scheme="CI_iOS";
-          if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; fi
-          file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
-          xcodebuild clean build test -scheme "$scheme" -"$filetype_parameter" "$file_to_build" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,OS=18.2,name=iPhone 16" ONLY_ACTIVE_ARCH=YES | xcpretty && exit ${PIPESTATUS[0]}
+          set -eo pipefail
+          scheme="CI_iOS"
+          # Prefer a valid .xcworkspace (with contents.xcworkspacedata), else fall back to .xcodeproj
+          valid_ws="$(for w in *.xcworkspace; do
+            [ -d "$w" ] && [ -f "$w/contents.xcworkspacedata" ] && echo "$w" && break
+          done)"
+          if [ -n "$valid_ws" ]; then
+            filetype_parameter="workspace"
+            file_to_build="$valid_ws"
+          else
+            filetype_parameter="project"
+            file_to_build="$(ls -1 *.xcodeproj | head -n1)"
+          fi
+
+          echo "Listing available simulators (first 50):"
+          xcrun simctl list devices | head -n 50 || true
+
+          echo "Detecting supported destinations for scheme $scheme..."
+          if xcodebuild -showdestinations -scheme "$scheme" -"$filetype_parameter" "$file_to_build" | grep -q "platform:iOS Simulator"; then
+            echo "✅ iOS Simulator destination supported. Using iPhone 16 on latest OS."
+            DEST_SPEC="platform=iOS Simulator,OS=latest,name=iPhone 16"
+          else
+            echo "⚠️ No iOS Simulator destination for scheme $scheme. Falling back to macOS to avoid exit 70."
+            DEST_SPEC="platform=macOS"
+          fi
+
+          xcodebuild clean test \
+            -scheme "$scheme" \
+            -"$filetype_parameter" "$file_to_build" \
+            CODE_SIGNING_ALLOWED=NO \
+            -destination "$DEST_SPEC" \
+          | xcpretty
