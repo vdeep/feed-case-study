@@ -30,4 +30,4 @@ jobs:
           scheme="CI_iOS";
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; fi
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
-          xcodebuild clean build test -scheme "$scheme" -"$filetype_parameter" "$file_to_build" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,OS=16.2,name=iPhone 14" ONLY_ACTIVE_ARCH=YES | xcpretty && exit ${PIPESTATUS[0]}
+          xcodebuild clean build test -scheme "$scheme" -"$filetype_parameter" "$file_to_build" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,OS=18.6,name=iPhone 16" ONLY_ACTIVE_ARCH=YES | xcpretty && exit ${PIPESTATUS[0]}
